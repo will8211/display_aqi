@@ -15,5 +15,5 @@
 
     <preference name = "permissions" value = "none"/>
 
-    <access origin="http://aqicn.org" />
+    <access origin="http://feed.aqicn.org" />
 </widget>
