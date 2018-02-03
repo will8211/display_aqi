@@ -14,6 +14,7 @@
     </author>
 
     <preference name = "permissions" value = "none"/>
+    <plugin name="cordova-plugin-whitelist" spec="~1.3.3" />
 
     <access origin="http://feed.aqicn.org" subdomains="true" />
     <allow-navigation href="http://feed.aqicn.org/*" />
