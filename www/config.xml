@@ -18,5 +18,8 @@
     <access origin="http://feed.aqicn.org" subdomains="true" />
     <allow-navigation href="http://feed.aqicn.org/*" />
     <allow-intent href="http://feed.aqicn.org/*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="data:*" />
     
 </widget>
