@@ -15,5 +15,5 @@
 
     <preference name = "permissions" value = "none"/>
 
-    <access origin="http://feed.aqicn.org" subdomains="true />
+    <access origin="http://feed.aqicn.org" subdomains="true" />
 </widget>
