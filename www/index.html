@@ -3,31 +3,34 @@
     <head>
         <title>Display AQI</title>
         <!--<meta http-equiv="refresh" content="5" >-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script  type="text/javascript"  charset="utf-8">
+            (function(w,d,t,f){  w[f]=w[f]||function(c,k,n){s=w[f],k=s['k']=(s['k']||(k?('&k='+k):''));s['c']=
+            c=(c  instanceof  Array)?c:[c];s['n']=n=n||0;L=d.createElement(t),e=d.getElementsByTagName(t)[0];
+            L.async=1;L.src='http://feed.aqicn.org/feed/'+(c[n].city)+'/'+(c[n].lang||'')+'/feed.v1.js?n='+n+k;
+            e.parentNode.insertBefore(L,e);  };  })(  window,document,'script','_aqiFeed'  );
+        </script>
     </head>
-    <body>
-    Hello
-    <div id="content">Unset</div>
-    <div id="content"><p>No frame</p></div>
+    <body style="margin:0;padding:0;overflow: hidden;">
+
+        <span  id="city-aqi-container"></span>
+        <script  type="text/javascript"  charset="utf-8">
+            //_aqiFeed({  container:"city-aqi-container",  city:"taiwan/nantou"  });
+            _aqiFeed({
+              display:"<div style='%style;text-align:center;height:100vh;'>" +
+                        "<div style='font-size:8vh;height:5vh;'>%cityname Air Quality Index:</div>" +
+                        "<div style='font-size:65vh;height:65vh;'>%aqiv</div>" +
+                        "<div style='font-size:15vh;height:20vh;font-weight:bold'>%impact</div>" +
+                        "<div style='font-size:5vh;height:5vh;'>Updated on %date</div>" +
+                      "</div>",
+              container:"city-aqi-container",
+              city:"taiwan/nantou"
+            });
+        </script>
+
+
+
+
     </body>
 
-<script>
-var url = 'http://aqicn.org/city/taiwan/nantou/';
-var html
-$.ajax({
-    type: 'GET',
-    dataType: 'html',
-    url: url,
-    timeout: 60 * 1000
 
-}).done(function (data) {
-    var html = data;
-    $("#status").html('<p>OK</p>');
-    $("#content").html(html);
-}).fail(function (a, b, c) {
-    $("#status").html('<p>FAIL</p>');
-    console.log(b + '|' + c);
-});
-//settings will require: <access origin="http://aqicn.org" />
-</script>
 </html>
