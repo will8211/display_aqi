@@ -16,4 +16,7 @@
     <preference name = "permissions" value = "none"/>
 
     <access origin="http://feed.aqicn.org" subdomains="true" />
+    <allow-navigation href="http://feed.aqicn.org/*" />
+    <allow-intent href="http://feed.aqicn.org/*" />
+    
 </widget>
