@@ -1,1 +1,19 @@
- 
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.tutorialspoint.onlineviewer" version = "1.0">
+
+    <name>Display AQI</name>
+
+    <description>
+      Turn old phone into air quality display screen
+    </description>
+
+    <author href = "https://github.com/will8211/display_aqi" email = "contact@tutorialspoint.com">
+      William Mannard
+    </author>
+
+    <preference name = "permissions" value = "none"/>
+
+    <access origin="http://aqicn.org" />
+</widget>
